@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="myli">
+
+        </ul>
+    </div>
+
+    <script>
+        var container = document.querySelector(".container");
+
+        var heading = document.createElement('h1');
+        heading.textContent = "My shopping list"
+        heading.setAttribute('type', 'text');
+
+        container.appendChild(heading)
+
+        var paragraph = document.createElement('paragraph');
+        paragraph.textContent = "Enter new item:"
+        paragraph.setAttribute('type', 'text');
+
+        container.appendChild(paragraph)
+
+        var inputElement = document.createElement('input');
+        inputElement.setAttribute('type', 'text');
+        container.appendChild(inputElement)
+
+
+        // console.log(inputElement)
+
+
+        var mybutton = document.createElement('button');
+        mybutton.textContent = "Add item";
+        container.appendChild(mybutton)
+            // console.log(mybutton)
+        mybutton.addEventListener("click", myli);
+
+        function myli() {
+            var myli = document.createElement('li');
+            myli.setAttribute('span', +'deletebutton');
+            container.appendChild(myli)
+        }
+    </script>
+</body>
+
+</html>
